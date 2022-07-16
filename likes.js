@@ -21,8 +21,6 @@ dislikeBtn.addEventListener("click", function() {
     calcPercentLikes(likes, dislikes);
 });
 
-var percentage = 0;
-
 // Calculating percentage for likes
 function calcPercentLikes(likes, dislikes) {
     percent_likes = likes / (likes + dislikes) * 100;
