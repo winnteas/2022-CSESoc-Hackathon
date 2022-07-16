@@ -1,1 +1,1 @@
-# 2022CSESocHackathon
+# 2022 CSESoc Hackathon
