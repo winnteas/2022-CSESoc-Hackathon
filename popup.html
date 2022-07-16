@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="button.css">
   </head>
   <body>
-    <p>
-        The button is <span class="hasLiked"></span>.
-    </p>
-    <!-- <button id="changeColor"></button>
-    <script src="popup.js"></script> -->
-    <button id="likeBtn" type="button">
-      Like!
-    </button>
-    <button id="dislikeBtn" type="button">
-      Dislike
-    </button>
-    <script src="likes.js"></script>
+    <div class="container">
+      <!-- <button id="changeColor"></button>
+      <script src="popup.js"></script> -->
+      <div id="like_interface" style="display: block;">
+        <button id="like_btn" type="button">
+          Like!
+        </button>
+        <button id="dislike_btn" type="button">
+          Dislike
+        </button>
+      </div>
+
+      <div id="statistics_interface" style="display: none;">
+        <p>
+          <span id="like_count">0</span> people liked this.
+        </p>
+        <p>
+          <span id="dislike_count">0</span> people disliked this.
+        </p>
+
+        <svg xmlns="http://www.w3.org/2000/svg">
+
+          <defs>
+            <linearGradient id="MyGradient" x2="100%" y2="0%">
+              <stop id="like_ratio_1" offset="33%" stop-color="green" />
+              <stop id="like_ratio_2" offset="33%" stop-color="red" />
+              <stop offset="100%" stop-color="red" />
+            </linearGradient>
+          </defs>
+      
+          <rect fill="url(#MyGradient)" stroke="black" stroke-width="5"  
+                x="0" y="0" width="300" height="40"/>
+      </svg>
+      <p>
+        <button id="back_button_statistics" type="button">Go Back</button>
+      </p>
+      </div>
+
+      <script src="likes.js"></script>
+    </div>
   </body>
 </html>
